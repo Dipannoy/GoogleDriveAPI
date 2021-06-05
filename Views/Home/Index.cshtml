@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">File Upload to Google Drive</h1>
+
+</div>
+
+
+@model GoogleAPIService.Models.FileObject
+<form asp-action="UploadGDrive" enctype="multipart/form-data">
+
+    <input asp-for="ImageCaption" />
+    <input asp-for="ImageDescription" />
+    <input asp-for="MyImage" />
+
+    <input type="submit" />
+</form>
+
+<input type="button" onclick="downLoadFile()" value="Get Message" />
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    function downLoadFile() {
+
+
+
+        $.ajax({
+            url: '/Home/DownloadFileGDrive',
+            type: "Get",
+
+            //dataType: "json",
+            //data: {
+            //    File: encode[1],
+            //    FileName: fileName,
+            //    MimeType: mimeType
+
+            //},
+            success: function (response) {
+                if (response.success) {
+
+                    alert(response.responseText);
+                    window.location.reload(true);
+
+
+                } else {
+                    // DoSomethingElse()
+
+
+                }
+            },
+            error: function (xhr, status, error) {
+                alert(error);
+            }
+        });
+    }
+
+
+
+</script>

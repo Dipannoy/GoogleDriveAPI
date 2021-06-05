@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "HogGppDVr8bP5LJaeh2q6ebusGQ0FeoMEZmjctA+qAUcOpTCslXg9xmNPOeTaMZQED3qJ8WQQ/MUXd/H8RPPIw==",
+  "success": true,
+  "projectFilePath": "D:\\AllSolution\\GoogleAPIService\\GoogleAPIService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\google.apis\\1.51.0\\google.apis.1.51.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\google.apis.auth\\1.51.0\\google.apis.auth.1.51.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\google.apis.core\\1.51.0\\google.apis.core.1.51.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\google.apis.drive.v3\\1.51.0.2320\\google.apis.drive.v3.1.51.0.2320.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\restsharp\\106.11.8-alpha.0.14\\restsharp.106.11.8-alpha.0.14.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\syroot.windows.io.knownfolders\\1.2.3\\syroot.windows.io.knownfolders.1.2.3.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
