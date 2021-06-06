@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AllSolution\\GoogleAPIService\\GoogleAPIService.csproj": {}
+    "D:\\WORKSTATION\\GoogleDriveAPI.git\\branches\\master\\GoogleAPIService.csproj": {}
   },
   "projects": {
-    "D:\\AllSolution\\GoogleAPIService\\GoogleAPIService.csproj": {
+    "D:\\WORKSTATION\\GoogleDriveAPI.git\\branches\\master\\GoogleAPIService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AllSolution\\GoogleAPIService\\GoogleAPIService.csproj",
+        "projectUniqueName": "D:\\WORKSTATION\\GoogleDriveAPI.git\\branches\\master\\GoogleAPIService.csproj",
         "projectName": "GoogleAPIService",
-        "projectPath": "D:\\AllSolution\\GoogleAPIService\\GoogleAPIService.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "D:\\AllSolution\\GoogleAPIService\\obj\\",
+        "projectPath": "D:\\WORKSTATION\\GoogleDriveAPI.git\\branches\\master\\GoogleAPIService.csproj",
+        "packagesPath": "C:\\Users\\Ariq\\.nuget\\packages\\",
+        "outputPath": "D:\\WORKSTATION\\GoogleDriveAPI.git\\branches\\master\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ariq\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Google.Apis.Drive.v3": {
               "target": "Package",
@@ -72,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

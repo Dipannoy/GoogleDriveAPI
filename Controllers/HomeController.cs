@@ -14,6 +14,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Text;
 using Syroot.Windows.IO;
+using Microsoft.AspNetCore.Hosting;
 
 
 // Syroot.Windows.IO.KnownFolders should be installed from Nuget Package.
@@ -23,10 +24,12 @@ namespace GoogleAPIService.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment webHostEnvironment)
         {
             _logger = logger;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
@@ -100,7 +103,11 @@ namespace GoogleAPIService.Controllers
 
         public ActionResult OuthRedirect()
         {
-            var CredFile = "D:\\client_secret.json";
+            string webRootPath = _webHostEnvironment.WebRootPath;
+            string contentRootPath = _webHostEnvironment.ContentRootPath;
+
+            //var CredFile = "D:\\client_secret.json";
+            var CredFile = contentRootPath + "\\GDriveJsonFiles\\client_secret.json";
 
             JObject credential = JObject.Parse(System.IO.File.ReadAllText(CredFile));
 
@@ -153,13 +160,21 @@ namespace GoogleAPIService.Controllers
 
                 try
                 {
+                    string webRootPath = _webHostEnvironment.WebRootPath;
+                    string contentRootPath = _webHostEnvironment.ContentRootPath;
+
                     //-------------------------project root-------------------------------- 
 
                     // Please set the tokenFile & uploadFileResponse  path inside your application directory.
                     // Not like the following set up. 
-                    var TokenFile = "D:\\TokenFile.json";
-                    var uploadFileResponse = "D:\\UploadResponse.json";
-               
+                    //var TokenFile = "D:\\TokenFile.json";
+                    //var uploadFileResponse = "D:\\UploadResponse.json";
+
+                    var TokenFile = contentRootPath + "\\GDriveJsonFiles\\TokenFile.json";
+                    var uploadFileResponse = contentRootPath + "\\GDriveJsonFiles\\UploadResponse.json";
+
+
+
                     var token = JObject.Parse(System.IO.File.ReadAllText(TokenFile));
                     if (token != null)
                     {

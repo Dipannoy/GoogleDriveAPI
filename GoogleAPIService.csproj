@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="GDriveJsonFiles\" />
     <Folder Include="wwwroot\GoogleDriveFiles\" />
   </ItemGroup>
 
