@@ -335,6 +335,66 @@ namespace GoogleAPIService.Controllers
             }
         }
 
+        public IActionResult DeleteFileGDrive()
+        {
+
+            try
+            {
+
+          
+
+                // Please set the token file path inside your application directory.
+                // Not like the following set up. 
+                var TokenFile = "D:\\TokenFile.json";
+
+            
+                string fileId = "1lk--bt6_8ObGgQjhk_sWiG2oxhS_A4N7";
+          
+
+
+                var token = JObject.Parse(System.IO.File.ReadAllText(TokenFile));
+                if (token != null)
+                {
+
+
+
+
+                    RestClient restClient = new RestClient();
+                    RestRequest restRequest = new RestRequest();
+
+
+                    restRequest.AddQueryParameter("key", "AIzaSyCSfmYx3A2793kdn1rjvxklhCSaDLoSLkY");
+
+                    restRequest.AddHeader("Authorization", "Bearer " + token["access_token"]);
+                    restRequest.AddHeader("Accecpt", "application/json");
+
+
+
+
+
+                    restClient.BaseUrl = new System.Uri("https://www.googleapis.com/drive/v3/files/" + fileId);
+                    var response = restClient.Delete(restRequest);
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        // No response will come after deletion.....
+                        // Just redirect to your expected page in else block..
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        return RedirectToAction("GetAccessTokenOnly", "OAuth");
+                    }
+                }
+                else
+                {
+                    return RedirectToAction("GetAccessTokenOnly", "OAuth");
+                }
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction("GetAccessTokenOnly", "OAuth");
+            }
+        }
 
         private static void SaveStream(MemoryStream stream, string FilePath)
         {
